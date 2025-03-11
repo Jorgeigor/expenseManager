@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Manager</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <main>
+        <header>
+            <div class="elements">Renda Mensal</div>
+            <div class="elements">Gastos mensais</div>
+            <div class="elements">Total</div>
+        </header>
+        <form>
+            <label for="form_Manager">
+                <input type="text">
+                <select name="entrance_exit" id="entrance_exit">
+                    <option value="" disabled selected hidden>Selecione a entrada</option>
+                    <option value="">Renda mensal</option>
+                    <option value="">Gasto mensal</option>
+                </select>
+            </label>
+        </form>
+    </main>
 </body>
 </html>

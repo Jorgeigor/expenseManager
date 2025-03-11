@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+main{
+    height: 100vh;
+    align-items: center;
+}
+header{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.elements{
+    text-align: center;
+    padding: 7px;
+    width: 300px;
+    height: 140px;
+    border: 1px solid violet;
+    background-color: gray;
+}
