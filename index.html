@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Manager</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+    <header class="text-md">Gestor de finanças</header>
     <main>
-        <header>
-            <div class="elements">Renda Mensal</div>
-            <div class="elements">Gastos mensais</div>
-            <div class="elements">Total</div>
-        </header>
-        <form>
-            <label for="form_Manager">
-                <input type="text">
-                <select name="entrance_exit" id="entrance_exit">
+        <div class="container">
+            <div class="elements">
+                <h2> Renda Mensal</h2>
+                <h1></h1>
+            </div>
+            <div class="elements">
+                <h2> Gastos mensais</h2>
+            </div>
+            <div class="elements">
+                <h2> Total</h2>
+            </div>
+        </div>
+        <form class="flex justify padding-sm">
+            <label for="form_Manager" class="flex gap-0.625">
+                <input type="date" class="btn btn-lg">
+                <input type="text" class="btn btn-lg" placeholder="Título">
+                <input type="text" placeholder="Insira o valor de entrada" class="btn btn-lg">
+                <select name="entrance_exit" class="btn btn-lg">
                     <option value="" disabled selected hidden>Selecione a entrada</option>
                     <option value="">Renda mensal</option>
                     <option value="">Gasto mensal</option>
+                    <input type="submit" class="btn btn-sm">
                 </select>
             </label>
         </form>
+        <div class="contentBox"></div>
     </main>
+    <script src="script/script.js"></script>
 </body>
 </html>

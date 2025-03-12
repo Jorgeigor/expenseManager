@@ -1,0 +1,18 @@
+.btn{
+    border: 1px solid #D1D5DB;
+    border-radius: 0.8rem;
+}
+
+.btn:focus{
+    outline-color: #D1D5DB;
+}
+.btn-sm{
+    width: 7.5rem;
+    height: 1.875rem;
+}
+
+.btn-lg{
+    width: 11.25rem;
+    height: 1.875rem;
+    padding: 0.1875rem;
+}
