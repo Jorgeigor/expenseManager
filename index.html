@@ -23,18 +23,20 @@
         </div>
         <form class="flex justify padding-sm">
             <label for="form_Manager" class="flex gap-0.625">
-                <input type="date" class="btn btn-lg">
-                <input type="text" class="btn btn-lg" placeholder="Título">
-                <input type="text" placeholder="Insira o valor de entrada" class="btn btn-lg">
-                <select name="entrance_exit" class="btn btn-lg">
+                <input type="date" class="btn btn-lg" id="dt">
+                <input type="text" class="btn btn-lg" placeholder="Título" id="title">
+                <select name="entrance_exit" class="btn btn-lg" id="entry">
                     <option value="" disabled selected hidden>Selecione a entrada</option>
-                    <option value="">Renda mensal</option>
-                    <option value="">Gasto mensal</option>
-                    <input type="submit" class="btn btn-sm">
+                    <option value="Renda mensal">Renda mensal</option>
+                    <option value="Gasto mensal">Gasto mensal</option>
                 </select>
+                <input type="text" placeholder="Insira o valor de entrada" class="btn btn-lg" id="value">
+                <input type="submit" class="btn btn-sm">
             </label>
         </form>
-        <div class="contentBox"></div>
+        <div class="contentBox">
+            <div class="teste"><span id="dt">Data</span><span id="dt">Tipo</span><span id="dt">Entrada</span><span id="dt">Valor</span></div>
+        </div>
     </main>
     <script src="script/script.js"></script>
 </body>
