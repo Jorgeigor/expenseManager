@@ -12,13 +12,15 @@
         <div class="container">
             <div class="elements">
                 <h2> Renda Mensal</h2>
-                <h1></h1>
+                <h1 id="rendaMensal">R$0</h1>
             </div>
             <div class="elements">
-                <h2> Gastos mensais</h2>
+                <h2> Gastos Mensal</h2>
+                <h1 id="gastoMensal">R$0</h1>
             </div>
             <div class="elements">
                 <h2> Total</h2>
+                <h1 id="totalRenda">R$0</h1>
             </div>
         </div>
         <form class="flex justify padding-sm">
@@ -30,7 +32,7 @@
                     <option value="Renda mensal">Renda mensal</option>
                     <option value="Gasto mensal">Gasto mensal</option>
                 </select>
-                <input type="text" placeholder="Insira o valor de entrada" class="btn btn-lg" id="value">
+                <input type="number" placeholder="Insira o valor de entrada" class="btn btn-lg" id="value">
                 <input type="submit" class="btn btn-sm">
             </label>
         </form>
