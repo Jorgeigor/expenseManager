@@ -18,13 +18,14 @@
 }
 
 .text-md{
+    font-weight: bold;
     font-size: 1.5rem;
 }
 
 h2{
-    color: white;
+    color: #8B878A;
 }
 
-.texto{
+h1{
     color: black;
 }

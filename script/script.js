@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const trashButton = document.createElement("button")
                 const trashImg = document.createElement("img")
                 
-                
-
                 // Adicionar a classe à <div>
                 new_element.className = "teste";
                 trashButton.className = "removeButton"
@@ -43,6 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         break
                     case "Gasto mensal":
                         entry.className = "entry01"
+                        break
+                    case "Selecione a entrada":
+                        alert("Insira uma entrada")
+                        form.removeEventListener(event)
+                        break
                 }
                 // Adicionar o texto da data ao <span>
                 text.textContent = `${object.date}`
@@ -60,31 +63,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Adicionar a <div> ao <body> ou a outro elemento da página
                 let element = document.querySelector(".contentBox")
                 element.appendChild(new_element)
+                function apagarDiv(){
+                    trashButton.addEventListener("click", (event) => {
+                        event.preventDefault()
+                        new_element.remove()
+                        if(object.entry == "Renda mensal"){
+                            somaRenda -= Number(object.value)
+                            rendaMensal.innerHTML = 'R$' + String(somaRenda)
+                        } else if(object.entry == "Gasto mensal"){
+                            somaGasto -= Number(object.value)
+                            gastoMensal.innerHTML = 'R$' + String(somaGasto)
+                        }
+                        somaTotal = somaRenda - somaGasto
+                        totalRenda.innerHTML = 'R$' + String(somaTotal)
+                    })
 
-                trashButton.addEventListener("click", (event) => {
-                    event.preventDefault()
-                    new_element.className = "remove"
-                })
+                }
+                apagarDiv()
+                
 
-                if(inputEntry.value == "Renda mensal"){
-                    somaRenda += Number(inputValue.value)
+                if(object.entry == "Renda mensal"){
+                    somaRenda += Number(object.value)
                     rendaMensal.innerHTML = 'R$' + String(somaRenda)
-                    rendaMensal.className = "texto"
+                
                 }
-                else if(inputEntry.value == "Gasto mensal"){
-                    somaGasto += Number(inputValue.value)
+                else if(object.entry == "Gasto mensal"){
+                    somaGasto += Number(object.value)
                     gastoMensal.innerHTML = 'R$' + String(somaGasto)
-                    gastoMensal.className = "texto"
                 }
-                if(totalRenda.innerHTML == "R$0"){
-                    somaTotal += somaRenda - somaGasto
+                    somaTotal = somaRenda - somaGasto
                     totalRenda.innerHTML = 'R$' + String(somaTotal)
-                    totalRenda.className = "texto"
                     
-                }
+                
+                
+                
             }
 
             executar();
+            
             
         });
         
